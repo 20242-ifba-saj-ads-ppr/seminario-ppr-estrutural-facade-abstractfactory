@@ -7,7 +7,7 @@ Neste exemplo, utilizamos o **Facade** para simplificar a lógica de um sistema 
 
 
 
-## UML do Facade (Mermaid)
+## UML do Facade 
 
 ```mermaid
 classDiagram
