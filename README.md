@@ -1,13 +1,13 @@
-### Facade Padrão: Simplificação do Sistema de Pedido
+# Facade Padrão: Simplificação do Sistema de Pedido
 
-#### Motivação
+## Motivação
 Em sistemas complexos, a interação entre diversos subsistemas pode ser complicada e difícil de gerenciar. O padrão de projeto **Facade** propõe a criação de uma interface única para simplificar o acesso a um conjunto de funcionalidades.
 
 Neste exemplo, utilizamos o **Facade** para simplificar a lógica de um sistema de pedidos, que envolve múltiplos subsistemas, como processamento de pagamento, estoque e notificações.
 
----
 
-### UML do Facade (Mermaid)
+
+## UML do Facade (Mermaid)
 
 ```mermaid
 classDiagram
@@ -29,11 +29,10 @@ classDiagram
     PedidoFacade --> Notificacao
 ```
 
----
 
-### Código do Facade
+## Código do Facade
 
-#### Interface PedidoFacade
+### Interface PedidoFacade
 ```java
 package facade;
 
@@ -58,9 +57,9 @@ public class PedidoFacade {
 }
 ```
 
-#### Implementação dos Subsistemas
+### Implementação dos Subsistemas
 
-##### Pagamento
+#### Pagamento
 ```java
 package facade;
 
@@ -72,7 +71,7 @@ public class Pagamento {
 }
 ```
 
-##### Estoque
+#### Estoque
 ```java
 package facade;
 
@@ -84,7 +83,7 @@ public class Estoque {
 }
 ```
 
-##### Notificação
+#### Notificação
 ```java
 package facade;
 
@@ -95,7 +94,7 @@ public class Notificacao {
 }
 ```
 
----
+
 
 ### Implementação do Cliente (Main)
 ```java
@@ -109,16 +108,14 @@ public class Main {
 }
 ```
 
----
-
-### Explicação do Código
+## Explicação do Código
 1. **Criamos um PedidoFacade** que encapsula a complexidade dos subsistemas Pagamento, Estoque e Notificacao.
 2. **Cada subsistema** realiza sua função de forma independente.
 3. **O cliente (Main)** interage apenas com a interface do PedidoFacade, sem precisar lidar diretamente com os detalhes internos do sistema.
 
----
 
-### Participantes
+
+## Participantes
 
 - **Facade (PedidoFacade)**
   - Fornece uma interface simplificada para o cliente interagir com o sistema.
